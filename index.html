@@ -5,8 +5,25 @@
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script type="text/javascript" src="phd.js"></script>
         <style type="text/css">
+            body {
+                font-family: Arial;
+            }
+
+            a {
+                text-decoration: none;
+                color: #1057AE;
+            }
+
+            h1 {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            p {
+                margin-top: 0;
+            }
+
             #prompt {
-                width: 100%;
                 border: 1px solid #ccc;
                 padding: 5px;
                 font-size: 2em;
@@ -17,18 +34,37 @@
                 font-family: monospace;
             }
 
+            #output-row {
+                overflow: hidden;
+            }
+
             #output {
+                float: left;
+                width: 80%;
                 font-size: 2em;
                 border: 1px solid #ccc;
                 overflow: scroll;
                 padding: 5px;
             }
+
+            #output-display {
+                float: left;
+                width: 240px;
+                margin-left: 20px;
+            }
         </style>
     </head>
     <body>
-        <h1><img src="flickr.png" title="Flickr" /></h1>
+        <h1>
+            <img src="flickr.png" title="Flickr" />
+        </h1>
 
-        <div id="output"></div>
+        <p>Flickr <a href="http://www.photohackday.org">Photo Hack Day Demo</a></p>
+
+        <div id="output-row">
+            <div id="output"></div>
+            <div id="output-display"></div>
+        </div>
         <form id="cmd" action="">
             <p><input type="text" name="prompt" id="prompt" /></p>
         </form>
